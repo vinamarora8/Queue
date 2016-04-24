@@ -9,3 +9,5 @@ Usage :
 - Can use non-parameterized constructor. If you have slight idea of how many elements will remain in the queue usually, use that as the parameter for the constructor. eg if you know on an average 4 elements will stay in the queue always, use queue q(4);
 - Remember to specify the data type eg. queue<int> or queue<string>
 - Everything else is pretty self-explanatory
+
+//I just realized that this will not work in a primitive system, where memory management is not well done. A circular queue will work similar to this. To manage memory, I need to shift data after every deleletion, just changing the pointer is not a good practice.

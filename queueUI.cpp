@@ -5,6 +5,7 @@ using namespace std;
 
 int main()
 {
+	cout << "Instructions \n+ <int> will enqueue\n- will dequeue\nl will return length of queue\np will peek\ne will exit the program" << endl;	
 	char a;
 	int b;
 	queue<int> q(10);
