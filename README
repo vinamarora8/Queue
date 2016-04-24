@@ -1,0 +1,11 @@
+Queue ADT has 4 functions
+- enqueue : add stuff to the end queue
+- dequeue : delete stuff from the front of queue
+- peek : returns the front element
+- length : returns the length of the queue
+
+Usage :
+- Include queue.h as well as queue.cpp in your program to support the template structure of the class
+- Can use non-parameterized constructor. If you have slight idea of how many elements will remain in the queue usually, use that as the parameter for the constructor. eg if you know on an average 4 elements will stay in the queue always, use queue q(4);
+- Remember to specify the data type eg. queue<int> or queue<string>
+- Everything else is pretty self-explanatory
