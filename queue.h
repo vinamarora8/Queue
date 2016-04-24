@@ -7,9 +7,11 @@ private:
 	int *first, *last;
 public:
 	queue(int);
+	queue();
 	void enqueue(int);
 	int dequeue();
 	int peek();
+	int length();
 };
 
 #endif
