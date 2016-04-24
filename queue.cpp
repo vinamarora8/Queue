@@ -23,10 +23,15 @@ void queue::enqueue(int element)
 
 int queue::dequeue()
 {
-	int ret = *first;
-	first++;
-	size--;
-	return ret;
+	if (size > 0)
+	{	
+		int ret = *first;
+		first++;
+		size--;
+		return ret;
+	}
+	else 
+		return 0;
 }
 
 int queue::peek()
