@@ -5,10 +5,13 @@ using namespace std;
 
 int main()
 {
+	int n;
+	cout << "Enter max length of queue (0 for unbounded) : ";
+	cin >> n;
 	cout << "Instructions \n+ <int> will enqueue\n- will dequeue\nl will return length of queue\np will peek\ne will exit the program" << endl;	
 	char a;
 	int b;
-	queue<int> q(10);
+	queue<int> q(n);
 	while (a != 'e')
 	{
 		cin >> a;

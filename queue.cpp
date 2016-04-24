@@ -1,27 +1,28 @@
 #include "queue.h"
+#include <iostream>
 
 template <class T>
 queue<T>::queue(int l)
 {
 	size = 0;
+	maxsize = l;
 	first = new T[l];
 	last = first;
 }
 
 template <class T>
-queue<T>::queue()
-{
-	size = 0;
-	first = new T[1];
-	last = first;
-}
-
-template <class T>
 void queue<T>::enqueue(T element)
-{
-	*last = element;
-	last++;
-	size++;
+{	
+	if (maxsize == 0 | size < maxsize)
+	{	
+		*last = element;
+		last++;
+		size++;
+	}
+	else
+	{
+		std::cout << '\a';
+	}
 }
 
 template <class T>

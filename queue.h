@@ -4,11 +4,10 @@
 template <class T>
 class queue{
 private:
-	int size;
+	int size, maxsize;
 	T *first, *last;
 public:
-	queue(int);
-	queue();
+	queue(int l = 0);
 	void enqueue(T);
 	T dequeue();
 	T peek();
