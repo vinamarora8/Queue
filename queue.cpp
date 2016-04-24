@@ -30,7 +30,13 @@ T queue<T>::dequeue()
 	if (size > 0)
 	{	
 		int ret = *first;
-		first++;
+		int *ptr = first;
+		while (ptr != last)
+		{
+			*ptr = *(ptr+1);
+			ptr++;
+		}
+		last--;
 		size--;
 		return ret;
 	}
