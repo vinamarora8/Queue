@@ -1,12 +1,13 @@
 #include <iostream>
 using namespace std;
 #include "queue.h"
+#include "queue.cpp"
 
 int main()
 {
 	char a;
 	int b;
-	queue q(10);
+	queue<int> q(10);
 	while (a != 'e')
 	{
 		cin >> a;

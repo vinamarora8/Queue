@@ -1,16 +1,17 @@
 #ifndef QUEUE_H
 #define QUEUE_H
 
+template <class T>
 class queue{
 private:
 	int size;
-	int *first, *last;
+	T *first, *last;
 public:
 	queue(int);
 	queue();
-	void enqueue(int);
-	int dequeue();
-	int peek();
+	void enqueue(T);
+	T dequeue();
+	T peek();
 	int length();
 };
 

@@ -1,27 +1,31 @@
 #include "queue.h"
 
-queue::queue(int l)
+template <class T>
+queue<T>::queue(int l)
 {
 	size = 0;
-	first = new int[l];
+	first = new T[l];
 	last = first;
 }
 
-queue::queue()
+template <class T>
+queue<T>::queue()
 {
 	size = 0;
-	first = new int[1];
+	first = new T[1];
 	last = first;
 }
 
-void queue::enqueue(int element)
+template <class T>
+void queue<T>::enqueue(T element)
 {
 	*last = element;
 	last++;
 	size++;
 }
 
-int queue::dequeue()
+template <class T>
+T queue<T>::dequeue()
 {
 	if (size > 0)
 	{	
@@ -34,12 +38,14 @@ int queue::dequeue()
 		return 0;
 }
 
-int queue::peek()
+template <class T>
+T queue<T>::peek()
 {
 	return *first;
 }
 
-int queue::length()
+template <class T>
+int queue<T>::length()
 {
 	return size;
 }
